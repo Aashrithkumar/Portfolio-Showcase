@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import profilePic from "@assets/90=1aaaaaaaaaa_copy~2_1772780348270.jpg";
 
 export function Hero() {
   return (
@@ -55,38 +56,12 @@ export function Hero() {
             className="relative lg:ml-auto w-full max-w-md mx-auto aspect-square"
           >
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-primary/20 to-accent/20 blur-2xl transform rotate-6" />
-            <div className="absolute inset-0 rounded-3xl bg-card border border-white/10 shadow-2xl overflow-hidden flex items-center justify-center">
-              {/* Abstract code/tech visual since no stock images */}
-              <div className="w-full h-full p-8 font-mono text-sm sm:text-base text-muted-foreground/50 flex flex-col gap-2 relative">
-                <div className="absolute top-4 left-4 flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500/50" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
-                  <div className="w-3 h-3 rounded-full bg-green-500/50" />
-                </div>
-                <div className="mt-8">
-                  <span className="text-accent">const</span> developer = {"{"}
-                  <br />
-                  &nbsp;&nbsp;name: <span className="text-green-400">"Myakala Aashrith"</span>,
-                  <br />
-                  &nbsp;&nbsp;role: <span className="text-green-400">"Full Stack Eng"</span>,
-                  <br />
-                  &nbsp;&nbsp;skills: [<span className="text-green-400">"React"</span>, <span className="text-green-400">"Node"</span>, <span className="text-green-400">"Python"</span>],
-                  <br />
-                  &nbsp;&nbsp;passionate: <span className="text-primary">true</span>,
-                  <br />
-                  &nbsp;&nbsp;solveProblem: <span className="text-accent">function</span>() {"{"}
-                  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-accent">return</span> <span className="text-green-400">"Elegant Code"</span>;
-                  <br />
-                  &nbsp;&nbsp;{"}"}
-                  <br />
-                  {"};"}
-                  <br />
-                  <br />
-                  developer.solveProblem();
-                  <span className="animate-pulse text-white block mt-2">_</span>
-                </div>
-              </div>
+            <div className="absolute inset-0 rounded-3xl bg-card border border-white/10 shadow-2xl overflow-hidden">
+              <img 
+                src={profilePic} 
+                alt="Myakala Aashrith Kumar" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
         </div>
