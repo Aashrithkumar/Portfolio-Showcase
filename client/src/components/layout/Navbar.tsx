@@ -1,14 +1,24 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Code2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+
+      // Determine active section
+      const sections = ["home", "about", "skills", "projects", "contact"];
+      for (const section of [...sections].reverse()) {
+        const el = document.getElementById(section);
+        if (el && el.getBoundingClientRect().top <= 150) {
+          setActiveSection(section);
+          break;
+        }
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -25,16 +35,14 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "glass-panel py-4" : "bg-transparent py-6"
+        scrolled ? "glass-panel py-4" : "bg-transparent py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-accent flex items-center justify-center shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-all duration-300 group-hover:scale-105">
-            <Code2 className="text-white w-5 h-5" />
-          </div>
-          <span className="text-xl font-bold tracking-wider group-hover:text-primary transition-colors">
-            AASHRITH
+        {/* Name-based branding in emerald */}
+        <a href="#home" className="group">
+          <span className="text-xl font-bold text-emerald-400 italic tracking-wide group-hover:text-emerald-300 transition-colors">
+            Aashrith Kumar
           </span>
         </a>
 
@@ -44,15 +52,15 @@ export function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-white transition-colors relative group"
+              className={`text-sm font-medium transition-colors relative ${
+                activeSection === link.href.slice(1)
+                  ? "text-emerald-400"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
-          <Button asChild className="rounded-full px-6 font-semibold bg-primary hover:bg-primary/90 text-primary-foreground">
-            <a href="#contact">Hire Me</a>
-          </Button>
         </nav>
 
         {/* Mobile Toggle */}
@@ -66,13 +74,17 @@ export function Navbar() {
 
       {/* Mobile Nav */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full glass-panel border-t border-white/5 py-4 px-4 flex flex-col gap-4 shadow-2xl">
+        <div className="md:hidden absolute top-full left-0 w-full glass-panel border-t border-border/30 py-4 px-4 flex flex-col gap-2 shadow-2xl">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-4 py-2 text-lg font-medium text-muted-foreground hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+              className={`block px-4 py-3 text-base font-medium rounded-lg transition-colors ${
+                activeSection === link.href.slice(1)
+                  ? "text-emerald-400 bg-emerald-500/10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+              }`}
             >
               {link.name}
             </a>

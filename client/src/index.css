@@ -9,41 +9,48 @@
     --font-sans: 'DM Sans', sans-serif;
     --font-display: 'Outfit', sans-serif;
 
-    /* Theme inspired by image: Deep Teal and Green */
-    --background: 180 20% 4%;
-    --foreground: 0 0% 98%;
+    /* Theme: Dark Navy with Emerald Green Accents */
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
     
-    --card: 180 20% 6%;
-    --card-foreground: 0 0% 98%;
+    --card: 222 84% 4.9%;
+    --card-foreground: 210 40% 98%;
     
-    --popover: 180 20% 6%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 222 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
     
-    --primary: 158 94% 30%; /* Deep Emerald Green */
-    --primary-foreground: 0 0% 100%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 84% 4.9%;
     
-    --secondary: 180 20% 12%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 217 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
     
-    --muted: 180 20% 12%;
-    --muted-foreground: 180 5% 65%;
+    --muted: 217 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
     
-    --accent: 158 94% 45%; /* Brighter Green */
-    --accent-foreground: 0 0% 100%;
+    --accent: 142 86% 28%;
+    --accent-foreground: 210 40% 98%;
     
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 180 20% 16%;
-    --input: 180 20% 16%;
-    --ring: 158 94% 30%;
+    --border: 217 32.6% 17.5%;
+    --input: 217 32.6% 17.5%;
+    --ring: 142 86% 28%;
 
-    --radius: 0.75rem;
+    --emerald: 142 86% 28%;
+    --emerald-light: 142 76% 36%;
+    --emerald-dark: 142 96% 20%;
+
+    --radius: 0.5rem;
   }
 
-  /* Force dark mode */
+  * {
+    border-color: hsl(var(--border));
+  }
+
   body {
-    @apply bg-background text-foreground antialiased selection:bg-primary/30;
+    @apply bg-background text-foreground antialiased;
     font-family: var(--font-sans);
   }
 
@@ -58,8 +65,8 @@
 }
 
 @layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary bg-[200%_auto] animate-gradient;
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600;
   }
   
   .bg-noise {
@@ -67,7 +74,18 @@
   }
 
   .glass-panel {
-    @apply bg-background/60 backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+    @apply bg-background/80 backdrop-blur-xl border-none shadow-lg;
+  }
+
+  .glass-card {
+    @apply bg-card/50 backdrop-blur-md border border-border/50;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+  .hover-lift:hover {
+    @apply -translate-y-2 shadow-xl;
   }
 }
 
@@ -80,4 +98,22 @@
 
 .animate-gradient {
   animation: gradient 6s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
 }
