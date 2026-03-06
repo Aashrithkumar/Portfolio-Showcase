@@ -1,0 +1,115 @@
+Featured Projects
+Real-world applications showcasing my skills in full-stack development
+
+CureConnect
+Web-Based Appointment Booking Application
+
+A comprehensive healthcare platform built with MERN stack that enables patients to book doctor appointments, make secure payments, and manage their healthcare needs efficiently.
+
+Key Features:
+User-friendly React.js interface for appointment booking
+Express.js and Node.js backend for robust appointment management
+Integrated Razorpay payment gateway for secure transactions
+Admin panel for comprehensive appointment and user management
+Doctor panel with appointment scheduling, profile management, and dashboard
+Real-time appointment notifications and status updates
+Technologies Used:
+React.js
+Node.js
+Express.js
+MongoDB
+Razorpay API
+View Code
+OutfitX
+Full-Featured Online Store
+
+A complete eCommerce solution built with MERN stack featuring modern UI/UX, secure payment processing, and comprehensive product management capabilities.
+
+Key Features:
+Modern React.js frontend with intuitive product display and navigation
+Advanced shopping cart functionality with persistent storage
+Secure user authentication and authorization system
+RESTful APIs with Express.js and Node.js for all operations
+Stripe integration for secure and reliable payment processing
+MongoDB database for dynamic product and user data management
+Technologies Used:
+React.js
+Node.js
+Express.js
+MongoDB
+Stripe API
+View Code
+Haven Heights Real Estate
+Comprehensive Real Estate Web Application
+
+A comprehensive real estate web application built using the MERN stack. It allows users to explore, list, and manage properties seamlessly.
+
+Key Features:
+Property listing and browsing with advanced search functionality
+User authentication and profile management system
+Property management dashboard for real estate agents
+Interactive property details with image galleries
+Responsive design for optimal viewing on all devices
+Real-time property availability updates
+Technologies Used:
+React.js
+Node.js
+Express.js
+MongoDB
+View Code
+Job Portal App
+MERN Stack Job Portal Application
+
+A comprehensive job portal application built using the MERN stack. This application allows users to browse job listings, apply for jobs, and manage their applications seamlessly.
+
+Key Features:
+Job browsing with advanced filtering and search capabilities
+User registration and profile creation for job seekers
+Application tracking and management system
+Employer dashboard for posting and managing job listings
+Resume upload and profile management features
+Real-time application status notifications
+Technologies Used:
+React.js
+Node.js
+Express.js
+MongoDB
+View Code
+Inventory Management System
+Lumen Hackathon Quest
+
+A comprehensive inventory management system built with MERN stack for the Lumen Hackathon Quest, featuring real-time stock tracking, order management, and analytics.
+
+Key Features:
+User authentication and role-based access control
+Real-time inventory tracking and stock management
+Purchase and sales order processing
+Barcode/QR code scanning for products
+Analytics dashboard with sales and inventory reports
+Responsive design for both desktop and mobile access
+Technologies Used:
+React.js
+Node.js
+Express.js
+MongoDB
+Redux
+View Code
+Nephroplus OCR Hackathon
+Lab Report Parser
+
+A robust solution for extracting structured information from clinical lab reports using advanced OCR techniques. Processes scanned lab reports to extract key information including patient details, test results, and reference ranges.
+
+Key Features:
+Advanced OCR processing for scanned lab reports
+Structured data extraction from unstructured reports
+Patient details and test results parsing
+Reference range analysis and flagging
+High accuracy data extraction algorithms
+User-friendly interface for report upload and results
+Technologies Used:
+Python
+Tesseract OCR
+OpenCV
+Flask
+Machine Learning
+View Code

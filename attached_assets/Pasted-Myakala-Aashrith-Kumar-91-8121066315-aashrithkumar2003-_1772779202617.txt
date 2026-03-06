@@ -1,0 +1,40 @@
+Myakala Aashrith Kumar
++91 8121066315 | aashrithkumar2003@gmail.com | LinkedIn
+Objective
+To obtain a Junior Software Developer position where I can apply my foundational programming skills to build efficient, user-focused
+software solutions while contributing to organizational growth and advancing my technical expertise.
+Education
+Neil Gogte Institute Of Technology, Hyderabad — B.E. Computer Science Engineering (2021–2025)
+Narayana Junior College, Hyderabad — Intermediate, TSBIE (2019–2021)
+Slate The School, Hyderabad — SSC (2018–2019)
+Technical Skills
+Programming: Java, Python
+Web: HTML5, CSS3, JavaScript
+Frameworks: MERN Stack, React, Node.js, Express.js
+Databases: MySQL, MongoDB
+ML Tools: OpenCV, TensorFlow, Keras
+Core CS: DBMS, Data Structures, OS, Networking
+Experience
+Intern — Bharat Dynamics Limited (May 2024 – June 2024)
+- Developed a web-based complaint management system using Java, JSP, Servlets, MySQL, HTML, CSS, and JavaScript.
+- Automated complaint assignment workflows, reducing manual effort.
+- Improved transparency and efficiency by digitizing manual log processes.
+Projects
+Implementation of Online Problem Reporting using Javascript, HTML, CSS, Nodejs
+- Implementation of Online Problem Reporting - This system provides an online way of solving the problems faced by the public by
+saving time and eradicate corruption.
+- The objective of the complaints management system is to make complaints easier to coordinate, monitor, track and resolve, and to provide
+company
+Alumni Network Using MERN Stack
+- An Alumni Network built using the MERN Stack (MongoDB, Express.js, React.js, Node.js) is a web application designed to connect former
+students (alumni) of an educational institution with current students, staff, and each other. It allows alumni to stay updated, share
+experiences, mentor juniors, and contribute to the growth of the institution.
+- There is a need to design and develop a centralized Alumni Network web application using the MERN Stack that enables secure interaction,
+data management, and collaboration between alumni, students, and the institution.
+Certifications
+• Bharat Dynamics Limited (BDL) Internship Certificate — Link
+• Java HackerRank Certificate — Link
+• Python HackerRank Certificate — Link
+• Machine Learning Certificate by IBM — Link
+Strengths
+Strong analytical skills, quick learner, adaptable to new technologies.
